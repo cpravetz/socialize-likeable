@@ -1,5 +1,5 @@
 /* eslint-disable import/no-unresolved */
-import SimpleSchema from 'simpl-schema';
+import SimpleSchema from 'meteor/aldeed:simple-schema';
 /* eslint-enable import/no-unresolved */
 
 export default ({ Meteor, Mongo, BaseModel, LinkableModel, ServerTime }) => {
@@ -34,7 +34,6 @@ export default ({ Meteor, Mongo, BaseModel, LinkableModel, ServerTime }) => {
     const LikeSchema = new SimpleSchema({
         userId: {
             type: String,
-            regEx: SimpleSchema.RegEx.Id,
             autoValue() {
                 if (this.isInsert) {
                     return this.userId;

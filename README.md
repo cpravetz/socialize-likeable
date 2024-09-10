@@ -69,7 +69,7 @@ import { LinkParent, LinkableModel } from '@socialize/linkable';
 
 ```javascript
 //This gets imported the same no matter the environment
-import SimpleSchema from 'simpl-schema';
+import SimpleSchema from 'meteor/aldeed:simple-schema';
 
 //define the collection to hold products
 const ProductsCollection = new Mongo.Collection("products");
